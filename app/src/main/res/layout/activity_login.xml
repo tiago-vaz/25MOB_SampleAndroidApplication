@@ -2,59 +2,60 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Usuário"
+        android:inputType="textPersonName"
+        android:paddingTop="50dp"
+        android:textSize="34sp" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="400dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/user"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Senha" />
-
-    <EditText
-        android:id="@+id/user"
-        android:layout_width="400dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Usuário" />
+        android:gravity="center"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingTop="50dp"
+        android:textSize="34sp"
+        android:layout_below="@id/userName"/>
 
     <Button
-        android:id="@+id/entrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_below="@id/password"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
+        android:insetLeft="6dp"
         android:text="Entrar" />
 
     <Button
-        android:id="@+id/esqueci"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnEsqueciSenha"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_below="@id/password"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@id/entrar"
+        android:layout_toRightOf="@id/btnLogin"
+        android:insetLeft="6dp"
         android:text="Esqueci a senha" />
 
     <Button
-        android:id="@+id/criar_conta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@id/esqueci"
-        android:text="Criar Conta" />
-
+        android:id="@+id/btnCadastro"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btnEsqueciSenha"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="120dp"
+        android:text="Cadastro" />
 </RelativeLayout>
